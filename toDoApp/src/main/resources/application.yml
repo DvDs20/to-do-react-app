@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: To-Do App
+  liquibase:
+    enabled: true
+    change-log: classpath:/db.changelog/db.changelog.xml
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: admin
+    password: admin123
+    url: jdbc:postgresql://localhost:5432/to-do
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    tags-sorter: alpha
+    operations-sorter: alpha
